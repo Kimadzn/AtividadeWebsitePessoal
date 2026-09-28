@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Website Pessoal | Arthur Xavier</title>
+</head>
+
+<body>
+
+    <header class="container">
+        <div class="logo">
+            <h2>Website Pessoal</h2>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section-1 container">
+
+            <div class="ebook">
+                <img src="images/IMG_9069.png" alt="Foto de Arthur Xavier">
+            </div>
+
+            <div class="action-title">
+                <h1>Quem eu sou?</h1>
+
+                <p>
+                    Me chamo Arthur Xavier, tenho 23 anos e atualmente curso
+                    Engenharia de Software na UniBH. Trabalho na área de
+                    Análise de Dados, buscando utilizar a tecnologia para
+                    transformar dados em informações úteis.
+                </p>
+
+                <p>
+                    Tenho interesse em programação, banco de dados,
+                    automação e desenvolvimento de sistemas. Estou sempre
+                    buscando aprender novas tecnologias e desenvolver
+                    minhas habilidades profissionais.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="section-2 container">
+
+            <h2>Conhecimentos e habilidades</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <img src="images/data.jpg" alt="Análise de Dados">
+
+                    <h3>ANÁLISE DE DADOS</h3>
+
+                    <p>
+                        Análise e organização de dados para gerar informações
+                        e auxiliar na tomada de decisões.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="images/py.jpg" alt="Python">
+
+                    <h3>PYTHON</h3>
+
+                    <p>
+                        Utilização de Python para programação, automação
+                        e manipulação de dados.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="images/sql.png" alt="SQL">
+
+                    <h3>SQL</h3>
+
+                    <p>
+                        Conhecimentos em bancos de dados e consultas
+                        utilizando SQL.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="description">
+
+                <p>
+                    Sou estudante de Engenharia de Software e atuo atualmente
+                    com Análise de Dados. Durante minha formação, venho
+                    desenvolvendo conhecimentos em programação, banco de dados,
+                    desenvolvimento de sistemas e tecnologias relacionadas à área.
+                </p>
+
+                <p>
+                    Meu objetivo é continuar evoluindo profissionalmente,
+                    adquirindo experiência e utilizando a tecnologia para
+                    resolver problemas e criar soluções eficientes.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="section-3">
+
+            <div class="section-3-content">
+
+                <h2>Desde 2003</h2>
+
+                <p>
+                    Sempre buscando aprender, evoluir e dar o meu melhor.
+                </p>
+
+                <p>
+                    Atualmente, meu foco está em Engenharia de Software,
+                    Análise de Dados e desenvolvimento de novas habilidades
+                    na área de tecnologia.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="section-4 container">
+
+            <h2>Meus objetivos</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>TECNOLOGIA</h3>
+
+                    <p>
+                        Aprender novas ferramentas e acompanhar
+                        a evolução da tecnologia.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>CARREIRA</h3>
+
+                    <p>
+                        Desenvolver minha experiência profissional
+                        e crescer na área de tecnologia.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>APRENDIZADO</h3>
+
+                    <p>
+                        Buscar constantemente novos conhecimentos
+                        e aprimorar minhas habilidades.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <button
+            onclick="topFunction()"
+            class="button-footer"
+            title="Voltar para o topo"
+            id="myBtn">
+            Voltar para o topo
+        </button>
+
+        <p>Website Pessoal Responsivo | Arthur Xavier</p>
+
+        <p>Engenharia de Software - UniBH</p>
+
+    </footer>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+
+        document.addEventListener("mousemove", function(e) {
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
+
+            cursor2.style.left = e.clientX + "px";
+            cursor2.style.top = e.clientY + "px";
+        });
+
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => {
+                    elemento.innerHTML += letra;
+                }, 75 * i);
+            });
+        }
+
+        const titulo = document.querySelector('.logo h2');
+
+        if (titulo) {
+            typeWriter(titulo);
+        }
+
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+
+</html>
+```
