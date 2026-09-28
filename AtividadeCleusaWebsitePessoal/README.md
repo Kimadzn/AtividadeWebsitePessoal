@@ -1,2 +1,2 @@
 # Website-Pessoal Curriculo
-Repositório de códigos referentes ao trabalho WEBSITE PESSOAL - pucminas
+Repositório de códigos referentes ao trabalho WEBSITE PESSOAL
